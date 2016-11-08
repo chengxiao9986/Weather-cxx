@@ -13,7 +13,7 @@ public class City {
     private String allFristPY;
 
 
-    public City(String province,String number,String firstPY,String allPY,String allFristPY){
+    public City(String province, String city, String number, String firstPY, String allPY, String allFristPY){
         this.province=province;
         this.city=city;
         this.number=number;
@@ -21,6 +21,7 @@ public class City {
         this.allPY=allPY;
         this.allFristPY=allFristPY;
     }
+
     public String getProvince(){return province;}
     public String getCity(){return city;}
     public String getNumber(){return number;}
