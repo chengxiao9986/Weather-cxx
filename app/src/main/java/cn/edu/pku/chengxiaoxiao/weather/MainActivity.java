@@ -2,13 +2,10 @@ package cn.edu.pku.chengxiaoxiao.weather;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.icu.text.StringPrepParseException;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.view.menu.MenuView;
-import android.support.v7.widget.ActivityChooserView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -300,5 +297,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return todayWeather;
     }
+
 
 }
