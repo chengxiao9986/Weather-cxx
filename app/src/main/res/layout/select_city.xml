@@ -33,10 +33,24 @@
             android:gravity="center" />
     </RelativeLayout>
     <ListView
-        android:id="@+id/select_dialog_listview"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
-        </ListView>
+        android:id="@+id/city_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    </ListView>
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="60dip"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:paddingLeft="10dip"/>
+    <TextView
+        android:id="@+id/city_number"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/city_name"
+        android:textColor="@android:color/black"
+        android:paddingLeft="10dip"/>
 </LinearLayout>
 
 
