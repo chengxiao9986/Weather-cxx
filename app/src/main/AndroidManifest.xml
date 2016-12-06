@@ -19,7 +19,8 @@
         </activity>
 
         <activity android:name=".SelectCtiy">
-            </activity>>
+            </activity>
+        <activity android:name=".SelectCity" />>
 
     </application>
 
