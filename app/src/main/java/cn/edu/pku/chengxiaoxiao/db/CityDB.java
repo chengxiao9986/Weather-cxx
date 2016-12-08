@@ -21,11 +21,12 @@ public class CityDB {
     private SQLiteDatabase db;
 
     public CityDB(Context context, String path) {
-        db=context.openOrCreateDatabase(path,Context.MODE_PRIVATE,null);
+        db = context.openOrCreateDatabase(CITY_DB_NAME,Context.MODE_PRIVATE,null);
+
     }
     public List<City>getAllCity(){
         List<City>list=new ArrayList<City>();
-        Cursor c = db.rawQuery("SELECT * from "+CITY_TABLE_NAME,null);
+        Cursor c = db.rawQuery("SELECT * FROM "+ CITY_TABLE_NAME,null);
         while (c.moveToNext()){
             String province=c.getString(c.getColumnIndex("province"));
             String city=c.getString(c.getColumnIndex("city"));
@@ -36,6 +37,7 @@ public class CityDB {
             City item=new City(province,city,number,firstPY,allPY,allFirstPY);
             list.add(item);
         }
+        c.close();
         return list;
     }
     public List<City> getSelectCity(String selectedCity){

@@ -1,5 +1,7 @@
 package cn.edu.pku.chengxiaoxiao.weather;
 
+import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
@@ -31,7 +33,7 @@ import cn.edu.pku.chengxiaoxiao.util.NetUtil;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final int UPDATE_TODAY_WEATHER=1;
-
+    private static Application application;
     private ImageView mUpdateBtn;
     private ImageView mCitySelect;
     private TextView cityTv, timeTv, humidityTv, weekTv, pmDataTv, pmQualityTv, temperatureTv, climateTv,
@@ -46,6 +48,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 default:
                     break; }
         } };
+
+    public static Application getInstance(){
+        return application;
+    }
+
     /**
      * 利用TodayWeather对象更新UI控件
      */
@@ -120,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
 
         if (view.getId()==R.id.title_city_manager){
-            Intent i=new Intent(this,SelectCtiy.class);
+            Intent i=new Intent(this,SelectCity.class);
             //startActivity(i);
 
             startActivityForResult(i,1);

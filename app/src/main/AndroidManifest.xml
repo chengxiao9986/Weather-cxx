@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.edu.pku.chengxiaoxiao.weather">
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name="cn.edu.pku.chengxiaoxiao.app.MyApplication"
@@ -18,10 +20,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SelectCtiy">
-            </activity>
-        <activity android:name=".SelectCity" />>
 
+        <activity android:name=".SelectCity" />
+        <activity android:name=".focus_city" />
     </application>
 
 </manifest>
