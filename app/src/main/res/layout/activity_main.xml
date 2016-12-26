@@ -171,6 +171,7 @@
             </LinearLayout>
             <!-- 今日天气信息块 -->
             <RelativeLayout
+                android:id="@+id/todayWeather_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -267,7 +268,19 @@
                     android:textSize="40sp" />
             </RelativeLayout>
         </RelativeLayout>
-
+        //未来天气模块
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/forcastWeather"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_below="@id/todayWeather_view"
+                android:paddingTop="30dip">
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
 
     </LinearLayout>
 
