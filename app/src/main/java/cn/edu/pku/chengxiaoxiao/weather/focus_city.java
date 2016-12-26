@@ -32,9 +32,7 @@ import cn.edu.pku.chengxiaoxiao.bean.City;
 import cn.edu.pku.chengxiaoxiao.bean.TodayWeather;
 import cn.edu.pku.chengxiaoxiao.db.CityDB;
 
-/**
- * Created by QiuYuan
- */
+
 public class focus_city extends Activity implements View.OnClickListener{
     //private TextView edit_city;
     private ImageView edit_city;

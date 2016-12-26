@@ -12,7 +12,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center"
-            android:text="当前城市：某某地"
+            android:text="当前城市：北京"
             android:textSize="20sp"
             android:textColor="#ffffffff"/>
         <ImageView
