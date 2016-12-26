@@ -1,9 +1,9 @@
 package cn.edu.pku.chengxiaoxiao.app;
 
+
 import android.Manifest;
 import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -19,7 +19,6 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +32,7 @@ import cn.edu.pku.chengxiaoxiao.db.CityDB;
 
 public class MyApplication extends Application {
     private static final String TAG = "MyApp";
-    private static Application application;
+    private static MyApplication application;
     private List<City> mCityList = null;
     private CityDB mCityDB = null;
     public static String cityName = "";
@@ -47,7 +46,9 @@ public class MyApplication extends Application {
         getLocationCity();
     }
 
-    public static Application getInstance() {
+    public static MyApplication getIntance()
+
+    {
         return application;
     }
 
@@ -188,8 +189,7 @@ public class MyApplication extends Application {
                 return;
             }
             locationManager.requestLocationUpdates(provider, 5000, 1, locationListener);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
