@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
         android:id="@+id/day4"
@@ -11,7 +11,7 @@
             android:id="@+id/day4_week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="周一"
+            android:text="星期一"
             android:paddingLeft="40dip"
             android:textColor="@android:color/white"/>
         <ImageView

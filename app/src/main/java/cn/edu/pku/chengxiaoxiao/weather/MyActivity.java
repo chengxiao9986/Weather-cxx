@@ -166,9 +166,9 @@ public class MyActivity extends Activity implements View.OnClickListener {
 
 
         //下面6天天气模块内容
-        //LayoutInflater inflater = getLayoutInflater();
-        //View view1 = inflater.inflate(R.layout.forcast_weather1,null);
-        View view1 = viewList.get(0);
+        LayoutInflater inflater = getLayoutInflater();
+        View view1 = inflater.inflate(R.layout.forcast_weather1,null);
+        //View view1 = viewList.get(0);
         day1_week = (TextView) view1.findViewById(R.id.day1_week);
         day1_temperature = (TextView) view1.findViewById(R.id.day1_temperature);
         day1_weather = (TextView) view1.findViewById(R.id.day1_weather);

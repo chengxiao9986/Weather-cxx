@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -25,6 +27,8 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import cn.edu.pku.chengxiaoxiao.bean.TodayWeather;
 import cn.edu.pku.chengxiaoxiao.util.NetUtil;
@@ -39,6 +43,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView cityTv, timeTv, humidityTv, weekTv, pmDataTv, pmQualityTv, temperatureTv, climateTv,
             windTv, city_name_Tv;
     private ImageView weatherImg, pmImg;
+
+    private ViewPager forcastWeather;
+    private View view1, view2;
+    private List<View> viewList;
 
     private Handler mHandler = new Handler() {
         public void handleMessage(android.os.Message msg) {
@@ -90,6 +98,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mCitySelect.setOnClickListener(this);
 
         initView();
+
+        initForcastView();
+
+    }
+
+
+
+    void initForcastView() {
+        forcastWeather = (ViewPager) findViewById(R.id.forcastWeather);
+        LayoutInflater inflater = getLayoutInflater();
+        view1 = inflater.inflate(R.layout.forcast_weather1, null);
+        view2 = inflater.inflate(R.layout.forcast_weather2, null);
+        viewList = new ArrayList<View>();
+        viewList.add(view2);
+        viewList.add(view1);
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(viewList, this);
+        forcastWeather.setAdapter(viewPagerAdapter);
+
     }
 
 
